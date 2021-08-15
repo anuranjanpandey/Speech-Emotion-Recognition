@@ -7,6 +7,8 @@ We have used the [Ryerson Audio-Visual Database of Emotional Speech and Song](ht
 <img src="https://user-images.githubusercontent.com/53137708/129469464-03943c07-47e7-4989-8465-84979f8c4d46.png"/>
 
 ### Feature Extraction
+
+For training the model we have converted the Audio singals into various Spectograms, check out this amazing [playlist](https://www.youtube.com/watch?v=iCwMQJnKk2c&list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0) for an indepth understanding.
 #### 1. SPECTOGRAM 
 
 &emsp;Spectrogram is a visual representation of the spectrum of frequencies of a signal as it varies with time. When applied to an audio signal, spectrograms are sometimes called sonographs, voiceprints, or voicegrams. When the data are represented in a 3D plot they may be called waterfalls.
@@ -32,10 +34,10 @@ We have used the [Ryerson Audio-Visual Database of Emotional Speech and Song](ht
 </p>
 
 ### Model
-In this project we have used the pretrained ResNet18 network for making the prediction, even though it was not trained on the audio data still it produced decent results.
+In this project we have used the pretrained ResNet18 network for making the prediction by replacing it's first and last layers, even though it was not trained on the audio data still it produced decent results after trainging. 
 
-
-A residual neural network (ResNet) is an artificial neural network (ANN) of a kind that builds on constructs known from pyramidal cells in the cerebral cortex. Residual neural networks do this by utilizing skip connections, or shortcuts to jump over some layers. Typical ResNet models are implemented with double- or triple- layer skips that contain nonlinearities (ReLU) and batch normalization in between.
+ We used the one cycle learning rate between lower bound and upper bound during complete run. Conventionally, the learning rate is decreased as the learning starts converging with time. As the higher learning rate may help to get out of saddle points. If saddle point is elaborate plateau, the lower learning rates might not be able get gradient out of saddle point. - [Paper link](https://arxiv.org/pdf/1506.01186.pdf)
+ 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/53137708/129469499-347a5fde-b686-4d90-8a20-a50abab15aef.png" width="1200" height="300"/>
 </p>
