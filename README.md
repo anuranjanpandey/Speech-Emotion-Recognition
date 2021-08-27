@@ -34,7 +34,7 @@ For training the model we have converted the Audio singals into various Spectogr
 </p>
 
 ### Model
-In this project we have used the pretrained ResNet18 network for making the prediction by replacing it's first and last layers, even though it was not trained on the audio data still it produced decent results after trainging. 
+In this project we have used the pretrained ResNet18 network for making the prediction by replacing it's first and last layers, even though it was not trained on the audio data still it produced decent results after training. 
 
  We used the one cycle learning rate between lower bound and upper bound during complete run. Conventionally, the learning rate is decreased as the learning starts converging with time. As the higher learning rate may help to get out of saddle points. If saddle point is elaborate plateau, the lower learning rates might not be able get gradient out of saddle point. - [Paper link](https://arxiv.org/pdf/1506.01186.pdf)
  
